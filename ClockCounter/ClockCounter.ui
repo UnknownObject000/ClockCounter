@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClockCounterClass</class>
+ <widget class="QMainWindow" name="ClockCounterClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>980</width>
+    <height>269</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>软件执行计时器</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="LcdNumber" name="NumHour01">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumHour02">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="UDateTimeSpliter" name="SpliterHourMinute" native="true">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="UDateTimeSpliter" name="SpliterMinuteSecond" native="true">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumMinute02">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumMinute01">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="UDateTimeSpliter" name="SpliterSecondMS" native="true">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumSecond01">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumSecond02">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumMillSec03">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumMillSec01">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LcdNumber" name="NumMillSec02">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>20</y>
+      <width>81</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnStartTimer">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始计时</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnStopTimer">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>190</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>停止计时</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnGetPreclickPos">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>190</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>获取预点击坐标</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnClearPreclickPos">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>190</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清除预点击坐标</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>LcdNumber</class>
+   <extends>QWidget</extends>
+   <header>lcdnumber.h</header>
+  </customwidget>
+  <customwidget>
+   <class>UDateTimeSpliter</class>
+   <extends>QWidget</extends>
+   <header>udatetimespliter.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="ClockCounter.qrc"/>
+ </resources>
+ <connections/>
+</ui>
