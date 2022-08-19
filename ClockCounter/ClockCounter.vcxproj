@@ -92,9 +92,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ACIMode.cpp" />
+    <ClCompile Include="GlobalVari.cpp" />
     <ClCompile Include="PreClick.cpp" />
     <ClCompile Include="UDateTimeSpliter.cpp" />
+    <ClCompile Include="UDBPushButton.cpp" />
     <QtRcc Include="ClockCounter.qrc" />
+    <QtUic Include="ACIMode.ui" />
     <QtUic Include="ClockCounter.ui" />
     <QtMoc Include="ClockCounter.h" />
     <ClCompile Include="ClockCounter.cpp" />
@@ -106,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="UDateTimeSpliter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ACIFullVersion.h" />
+    <ClInclude Include="GlobalVari.h" />
+    <QtMoc Include="UDBPushButton.h" />
+    <QtMoc Include="ACIMode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

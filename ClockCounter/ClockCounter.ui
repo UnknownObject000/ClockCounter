@@ -166,7 +166,7 @@
      <string>停止计时</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="BtnGetPreclickPos">
+   <widget class="UDBPushButton" name="BtnGetPreclickPos">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -206,6 +206,11 @@
    <extends>QWidget</extends>
    <header>udatetimespliter.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UDBPushButton</class>
+   <extends>QPushButton</extends>
+   <header>udbpushbutton.h</header>
   </customwidget>
  </customwidgets>
  <resources>

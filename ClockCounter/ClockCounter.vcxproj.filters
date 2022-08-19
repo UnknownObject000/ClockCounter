@@ -46,9 +46,21 @@
     <ClCompile Include="UDateTimeSpliter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ACIMode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UDBPushButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="PreClick.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ACIMode.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -59,5 +71,19 @@
     <QtMoc Include="UDateTimeSpliter.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ACIMode.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UDBPushButton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GlobalVari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ACIFullVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
