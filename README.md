@@ -5,3 +5,14 @@
  - ACI通信接口客户端基于 [libcurl](https://github.com/curl/curl) 制作
  - LCD数字GUI库来源于 [QWidgetDemo](https://github.com/feiyangqingyun/QWidgetDemo)
  - JSON数据解析库 [JsonCPP](https://github.com/open-source-parsers/jsoncpp)
+## 编译环境
+ - Qt6.3.1
+ - Visual Studio 2022
+ - Qt VS Tools 2.9.1
+## 编译流程
+ 1. 安装所需依赖库
+```c++
+vcpkg install jsoncpp libcurl
+```
+ 2. 打开解决方案文件（.sln），生成
+ 3. 下载本项目Release中的quc.dll文件，与编译出的可执行文件放在一起
