@@ -54,6 +54,7 @@ void PreClick::StartCursorTrack()
 	else
 	{
 		CursorUpdate.start();
+		this->grabKeyboard();
 		ui.BtnGetPos->setText("停止获取");
 	}
 }

@@ -63,7 +63,7 @@ private:
 private:
 	static size_t process_data(void* buffer, size_t size, size_t nmemb, void* user_p);
 public:
-	ACIClient(int server_port = 10000);
+	ACIClient(int server_port = 10000, std::string target_ip = "127.0.0.1");
 	~ACIClient();
 public:
 	bool SendData(std::string item, std::string data, ClientCallback cb_func = nullptr);
@@ -154,6 +154,7 @@ public:
 	void Run(int worker_thread = 1, int loop_thread = 1);
 	void ThreadRun(int worker_thread = 1, int loop_thread = 1);
 	void Stop();
+	bool IsRunning();
 	bool EnableCallback(ServerInputCallback cb_func = nullptr);
 	bool SetCallbackFunction(ServerInputCallback cb_func);
 	bool DisableCallback();

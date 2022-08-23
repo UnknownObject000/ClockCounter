@@ -9,7 +9,8 @@ ACIMode::ACIMode(QWidget* parent) : QMainWindow(parent)
 	ui.setupUi(this);
 	ui.Workmode_Client->setChecked(true);
 	ui.Workmode_Server->setChecked(false);
-	ui.PortNumber->setPlainText("23456");
+	ui.IP->installEventFilter(this);
+	ui.PortNumber->installEventFilter(this);
 	connect(ui.BtnStart, &QCommandLinkButton::clicked, this, &ACIMode::StartACISystem);
 }
 
@@ -54,7 +55,7 @@ void ACIMode::StartACISystem()
 	{
 		CleanUp();
 		OperationMode = 0;
-		client = new ACIClient(ui.PortNumber->toPlainText().toInt());
+		client = new ACIClient(ui.PortNumber->toPlainText().toInt(), ui.IP->toPlainText().toStdString());
 		this->hide();
 		break;
 	}
@@ -99,6 +100,21 @@ void ACIMode::closeEvent(QCloseEvent* event)
 {
 	this->hide();
 	event->ignore();
+}
+
+bool ACIMode::eventFilter(QObject* watched, QEvent* event)
+{
+	if (watched == ui.IP)
+	{
+		if (event->type() == QEvent::FocusIn)
+			ui.IP->grabKeyboard();
+	}
+	else if (watched == ui.PortNumber)
+	{
+		if (event->type() == QEvent::FocusIn)
+			ui.PortNumber->grabKeyboard();
+	}
+	return QWidget::eventFilter(watched, event);
 }
 
 std::string RequestedTimerStart(std::string json)

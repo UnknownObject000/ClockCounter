@@ -66,19 +66,27 @@ void ClockCounter::StartTimer()
 				this->setWindowTitle("软件执行计时器: 正在计时");
 			}
 		}
+		else
+		{
+			CountTimer.start();
+			this->setWindowTitle("软件执行计时器: 正在计时");
+		}
 	}
 }
 
 void ClockCounter::StopTimer()
 {
-	CountTimer.stop();
-	if (GlobalVari::ServerRequested && (aci_mode_window.GetOperationMode() == 1))
+	if (CountTimer.isActive())
 	{
-		GlobalVari::ServerRequested = false;
-		ServerStatusChecker.start();
+		CountTimer.stop();
+		if (GlobalVari::ServerRequested && (aci_mode_window.GetOperationMode() == 1))
+		{
+			GlobalVari::ServerRequested = false;
+			ServerStatusChecker.start();
+		}
+		ui.BtnStartTimer->setText("重置计时器");
+		this->setWindowTitle("软件执行计时器: 计时已停止");
 	}
-	ui.BtnStartTimer->setText("重置计时器");
-	this->setWindowTitle("软件执行计时器: 计时已停止");
 }
 
 void ClockCounter::ShowACIModeWindow()
